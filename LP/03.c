@@ -13,7 +13,10 @@ int main(){
 
         delta = calculaDelta(a, b, c);
         if(delta < 0){
-            printf("Nao Existe Raiz");
+            X1 = calculaRaiz(delta*-1, a, b, 0);
+            X2 = calculaRaiz(delta*-1, a, b, 1);
+            printf("\nDelta = %.2f \nX1 = %.2f + i \nX2 = %.2f + i\n",delta , X1, X2);
+            printf("Não tem raiz nos reais!");
         }else if(delta >= 0){
             X1 = calculaRaiz(delta, a, b, 0);
             X2 = calculaRaiz(delta, a, b, 1);
@@ -45,7 +48,6 @@ int verificaNumPosNeg(float delta){
 float calculaDelta(float a, float b, float c){
     float delta;
     delta = pow(b, 2) - (4 * a * c);
-    printf("%f", delta);
     return delta;
 }
 

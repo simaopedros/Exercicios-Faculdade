@@ -6,7 +6,7 @@ int main(){
     float temp, temConvert;
     int tipoTemp;
 
-    printf("Qual a temperatura [1] Celsius - [2] Farenheit\n ");
+    printf("Qual a temperatura [1] Celsius - [2] Farenheit\n");
     scanf("%d", &tipoTemp);
     scanf("%f", &temp);
     switch (tipoTemp)
@@ -18,8 +18,10 @@ int main(){
         temConvert = farenhToCelsius(temp);
         break;
     default:
+        temConvert = 0;
         break;
     }
+    printf("%.2f", temConvert);
 
 }
 
