@@ -1,22 +1,16 @@
 #include <stdio.h>
 
-void verificaNumero(float numero);
+int verificaNumero(float numero);
 
 int main(){
     float numero;
-
+    
     scanf("%f", &numero);
-    verificaNumero(numero);
+    printf("%s\n",verificaNumero(numero) == 0?"Numero negativo":"Numero Positivo");
 }
 
-void verificaNumero(float numero)
-{
-    if (numero > 0)
-    {
-        printf("Positivo\n");
-    }
-    else if (numero < 0)
-    {
-        printf("Negativo\n");
-    }
+int verificaNumero(float numero){
+    int retorno;
+    retorno = numero>=0?1:0;
+    return retorno;
 }
